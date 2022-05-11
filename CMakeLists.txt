@@ -47,6 +47,11 @@ else()
   message(FATAL_ERROR "Unexpected cmake generator ${CMAKE_GENERATOR}")
 endif()
 
+macro(rooster_add_executable)
+  get_filename_component(EXECUTABLE_NAME ${CMAKE_CURRENT_SOURCE_DIR} NAME)
+  add_executable(${EXECUTABLE_NAME} main.cpp)
+endmacro()
+
 add_subdirectory(4.VariablesAndDatatypes)
 
 cmake_print_variables(CMAKE_SOURCE_DIR) # It will print: '-- CMAKE_SOURCE_DIR="C:/project"'
