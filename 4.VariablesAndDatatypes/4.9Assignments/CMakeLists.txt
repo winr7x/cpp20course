@@ -1,1 +1,1 @@
-rooster_add_executable()
+rooster_add_executable_with_curdir_name_maincpp()

@@ -1,2 +1,1 @@
-add_subdirectory(4.8Auto)
-add_subdirectory(4.9Assignments)
+rooster_add_all_subdirs_of_current_dir()
