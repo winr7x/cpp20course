@@ -49,6 +49,7 @@ else()
 endif()
 
 add_subdirectory(4.VariablesAndDatatypes)
+add_subdirectory(5.OperationsOnData)
 
 cmake_print_variables(CMAKE_SOURCE_DIR) # It will print: '-- CMAKE_SOURCE_DIR="C:/project"'
 cmake_print_variables(CMAKE_BINARY_DIR) # It will print: '-- CMAKE_SOURCE_DIR="C:/project/build"'
