@@ -1,4 +1,4 @@
-// Time: 00:04:58:01
+// https://youtu.be/8jLOx1hD3_o?t=17884
 
 #include <iostream>
 #include <string>
