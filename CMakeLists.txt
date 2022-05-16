@@ -1,5 +1,5 @@
 include(CMakePrintHelpers) # for command cmake_print_variables()
-include(cmake/macro.cmake) # include useful macro functions
+include(cmake/functions.cmake) # include useful functions
 
 cmake_minimum_required (VERSION 3.13.3) # 3.13.3 was released Jan 14, 2019
 
