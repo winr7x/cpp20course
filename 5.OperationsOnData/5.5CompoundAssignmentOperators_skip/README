@@ -1,0 +1,9 @@
+Time: 00:05:23:22
+
+Too easy:
+
+value += 5
+value -= 5
+value *= 2
+value /= 3
+value %= 11
