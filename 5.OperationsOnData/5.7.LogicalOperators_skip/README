@@ -1,0 +1,9 @@
+https://youtu.be/8jLOx1hD3_o?t=20454
+
+Too easy:
+
+cout << ((d > e) && (d > f))
+cout << ((d == e) || (e <= f))
+cout << ((d < e) || (d > f))
+cout << ((f > e) || (d < f))
+cout << ((!a) || (d == e))
