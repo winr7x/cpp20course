@@ -22,3 +22,14 @@ cmake -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -G 'MinGW Makefiles'
 cmake --build .\build\ --config Release --clean-first --target 5.6.RelationalOperators #--verbose      # build specific target
 cmake --build .\build\ --config Release --verbose --clean-first                                        # build entire project
 ```
+
+## Tags
+
+`NEW_FOR_ME` - Information which was new for me.  
+`UNCOMMENT_FOR_ERROR` - Uncomment code marked with this tag to get error.  
+
+To search tag in project:
+
+```powershell
+dir -Recurse | sls -pattern "NEW_FOR_ME"
+```
