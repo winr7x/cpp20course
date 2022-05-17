@@ -4,18 +4,21 @@
 ```powershell
 # Windows Start Menu --> Visual Studio 2022 --> 'Developer PowerShell for VS 2022'
 
-& 'C:\Program Files\CMake\bin\cmake.exe' -G 'Visual Studio 17 2022' -S .\ -B .\build\                                                     # configure cmake msvc
+cmake -G 'Visual Studio 17 2022' -S .\ -B .\build\                                                     # configure cmake msvc. way 1
+& 'C:\Program Files\CMake\bin\cmake.exe' -G 'Visual Studio 17 2022' -S .\ -B .\build\                  # configure cmake msvc. way 2
 
 # -G <generator-name> -- you can get generators list in 'cmake --help'
+# & is the call operator which allows you to execute a command, a script, or a function
 ```
 
 ### Configure with GCC or Clang
 ```powershell
-& 'C:\Program Files\CMake\bin\cmake.exe' -G 'MinGW Makefiles' -S .\ -B .\build\                                                           # configure cmake gcc
-& 'C:\Program Files\CMake\bin\cmake.exe' -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -G 'MinGW Makefiles' -S .\ -B .\build\     # configure cmake clang
+cmake -G 'MinGW Makefiles' -S .\ -B .\build\                                                           # configure cmake gcc
+cmake -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -G 'MinGW Makefiles' -S .\ -B .\build\     # configure cmake clang
 ```
 
 ### Build
 ```powershell
- & 'C:\Program Files\CMake\bin\cmake.exe' --build .\build\ --config Release --verbose --clean-first                                       # build entire project
+cmake --build .\build\ --config Release --clean-first --target 5.6.RelationalOperators #--verbose      # build specific target
+cmake --build .\build\ --config Release --verbose --clean-first                                        # build entire project
 ```
