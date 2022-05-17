@@ -25,7 +25,7 @@ int main(int argc, char **argv)
     std::cout << "number1 == number2 : " << (number1 == number2) << std::endl;
     std::cout << "number1 != number2 : " << (number1 != number2) << std::endl;
 
-    // UNCOMMENT_TO_GET_ERROR '<<'-operation priority is higher than '<'-operation
+    // UNCOMMENT_FOR_ERROR '<<'-operation priority is higher than '<'-operation
     // std::cout << "number1 < number2 : " << number1 < number2 << std::endl;
 
     std::cout << std::endl;
