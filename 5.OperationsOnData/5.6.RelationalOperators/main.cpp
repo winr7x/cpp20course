@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 
     bool result = (number1 == number2);
 
-    std::cout << std::noboolalpha; // NEW_FOR_ME Wat to disable boolalpha
+    std::cout << std::noboolalpha; // NEW_FOR_ME Way to disable boolalpha
     std::cout << number1 << " == " << number2 << " : " << result << std::endl;
 
     return 0;
