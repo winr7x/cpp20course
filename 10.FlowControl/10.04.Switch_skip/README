@@ -1,0 +1,24 @@
+https://youtu.be/8jLOx1hD3_o?t=26927
+
+Too easy
+
+const int Pen {1};
+const int Marker {2};
+
+switch (tool) {
+
+  case Pen: {
+    cout << "is pen";
+  }
+  break;
+
+  case Marker: {
+    cout << "is marker";
+  }
+  break;
+
+  default: {
+    cout << "can't match";
+  }
+
+}
