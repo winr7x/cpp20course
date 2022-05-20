@@ -21,9 +21,16 @@ int main(int argc, char **argv)
     std::cout << "number2 is : " << number2 << std::endl; // 15'ish digits
     std::cout << "number3 is : " << number3 << std::endl; // 7 digits
 
-    float number4 (192400023);
+    // float number4 = 192400023; // UNCOMMENT_FOR_ERROR warning: implicit conversion from 'int' to 'float' changes value from 192400023 to 192400016
+                               // NEW_FOR_ME In your case, a float only has about 24 bits of precision. While an int has 32 bits of precision, therefore, some precision is loss by this cast, hence the warning.
+
     // number4 = number4 + 1;
-    std::cout << "number4 is : " << number4 << std::endl;
+    // std::cout << "number4 is : " << number4 << std::endl;
+
+    // float number4_2 = 192400023f; // NEW_FOR_ME UNCOMMENT_FOR_ERROR error: invalid digit 'f' in decimal constant
+
+    float number4_3 {192400023.f};
+    std::cout << "number4_3 is : " << number4_3 << std::endl;
 
     double number5 {192400023};
     double number6 {1.92400023e8}; // the same number as above
