@@ -1,0 +1,14 @@
+https://youtu.be/8jLOx1hD3_o?t=30321
+
+Too easy
+
+const size_t COUND{100};
+size_t i{0}; // Iterator declaration
+
+while(i < COUNT) { // Test
+    std::cout << i << " : I love C++" << std::endl;
+
+    ++i; // Incremention
+}
+
+std::cout << "Loop done!" << std::endl;
