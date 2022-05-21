@@ -51,6 +51,7 @@ endif()
 add_subdirectory(04.VariablesAndDatatypes)
 add_subdirectory(05.OperationsOnData)
 add_subdirectory(10.FlowControl)
+add_subdirectory(11.Loops)
 
 cmake_print_variables(CMAKE_SOURCE_DIR) # It will print: '-- CMAKE_SOURCE_DIR="C:/project"'
 cmake_print_variables(CMAKE_BINARY_DIR) # It will print: '-- CMAKE_SOURCE_DIR="C:/project/build"'
