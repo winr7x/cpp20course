@@ -3,7 +3,7 @@
 #include <cmath>
 #include <iostream>
 
-int main(int argc, char **argv) {
+int main() {
   double weight{7.7};
 
   // floor

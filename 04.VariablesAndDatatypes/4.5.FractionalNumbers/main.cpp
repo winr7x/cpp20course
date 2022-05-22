@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 
-int main(int argc, char **argv) {
+int main() {
   // Declare and initialize the variables
   float number1{1.12345678901234567890f};
   double number2{1.12345678901234567890};
@@ -43,19 +43,21 @@ int main(int argc, char **argv) {
   std::cout << "number8 is : " << number8 << std::endl;
   std::cout << "number9 is : " << number9 << std::endl;
 
-  double number10{5.6};
-  double number11{}; // Initialized to 0
-  double number12{}; // Initialized to 0
+  [[maybe_unused]] double number10{5.6};
+  [[maybe_unused]] double number11{}; // Initialized to 0
+  [[maybe_unused]] double number12{}; // Initialized to 0
 
   // Infinity
-  double result{number10 / number11}; // NEW_FOR_ME 'inf' value if we use fractional number types (or -inf when negative / 0.0)
+  // double result{number10 / number11}; // NEW_FOR_ME 'inf' value if we use fractional number types (or -inf when negative / 0.0)
+  //                                     // UNCOMMENT_FOR_ERROR warning C4723: potential divide by 0
 
-  std::cout << number10 << "/" << number11 << "  yields " << result << std::endl;
-  std::cout << result << " + " << number10 << " yields " << result + number10 << std::endl;
+  // std::cout << number10 << "/" << number11 << "  yields " << result << std::endl; // output: 'inf'
+  // std::cout << result << " + " << number10 << " yields " << result + number10 << std::endl; // output: 'inf'
 
-  result = number11 / number12; // NEW_FOR_ME 'nan' (Not A Number) value if we use fractional number types
+  // result = number11 / number12; // NEW_FOR_ME 'nan' (Not A Number) value if we use fractional number types
+  //                               // UNCOMMENT_FOR_ERROR warning C4723: potential divide by 0
 
-  std::cout << number11 << "/" << number12 << " = " << result << std::endl;
+  // std::cout << number11 << "/" << number12 << " = " << result << std::endl;
 
   return 0;
 }

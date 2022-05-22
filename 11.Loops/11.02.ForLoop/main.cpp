@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-int main(int argc, char **argv) {
+int main() {
   for (size_t i{}; i < 10; ++i) { // NEW_FOR_ME Way to initialize i var to zero
     std::cout << "I love C++" << std::endl;
   }

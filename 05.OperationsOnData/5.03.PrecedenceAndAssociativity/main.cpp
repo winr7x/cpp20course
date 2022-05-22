@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-int main(int argc, char **argv) {
+int main() {
   int a{6};
   int b{3};
   int c{8};

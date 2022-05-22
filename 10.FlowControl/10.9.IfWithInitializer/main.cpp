@@ -9,7 +9,7 @@ int main() {
   // With if initializer
   if (const int high_speed{33}, fake_var{-200}; go) { // NEW_FOR_ME Initialize variable in if
 
-    if (high_speed > 5) {
+    if constexpr (high_speed > 5) { // There is no 'constexpr' in original. It is added to avoid: warning C4127: conditional expression is constant
       std::cout << "Slow down!" << std::endl;
     } else {
       std::cout << "All good!" << std::endl;

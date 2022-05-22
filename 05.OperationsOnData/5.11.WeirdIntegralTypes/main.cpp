@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-int main(int argc, char **argv) {
+int main() {
   short int var1{10};
   short int var2{20};
 

@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-int main(int argc, char **argv) {
+int main() {
   int var1{123}; // Declare and initialize
   std::cout << "var1 : " << var1 << std::endl;
 
@@ -38,11 +38,11 @@ int main(int argc, char **argv) {
 
   // Auto type deduction
   // Careful about auto assignments
-  auto var3{333u}; // Declare and initializewith type deduction
+  [[maybe_unused]] auto var3{333u}; // Declare and initializewith type deduction
 
-  var3 = -22; // Assign negative number. DANGER!
+  // var3 = -22; // Assign negative number. DANGER! UNCOMMENT_FOR_ERROR warning C4245: '=': conversion from 'int' to 'unsigned int'
 
-  std::cout << "var3 : " << var3 << std::endl; // It will print 4294967274
+  // std::cout << "var3 : " << var3 << std::endl; // It will print 4294967274
 
   return 0;
 }

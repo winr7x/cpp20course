@@ -5,7 +5,7 @@
 #include <limits>
 #include <string>
 
-int main(int argc, char **argv) {
+int main() {
   std::cout << "short:\n";
   std::cout << "  lowest:" << std::numeric_limits<short>::lowest() << std::endl;
   std::cout << "  min:" << std::numeric_limits<short>::min() << std::endl;

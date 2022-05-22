@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-int main(int argc, char **argv) {
+int main() {
   auto var1{12};    // int
   auto var2{13.0};  // double
   auto var3{14.0f}; // float

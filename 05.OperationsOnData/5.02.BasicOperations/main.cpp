@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-int main(int argc, char **argv) {
+int main() {
   // Addition
   int number1{2};
   int number2{7};

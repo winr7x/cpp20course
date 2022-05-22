@@ -22,7 +22,7 @@ bool spouse() {
   return true;
 }
 
-int main(int argc, char **argv) {
+int main() {
   if (car() || house() || job() || spouse()) { // NEW_FOR_ME 'Short Circuit Evaluation' - interrupting calculation when compiler already knows the if result
     std::cout << "I am happy" << std::endl;
   } else {

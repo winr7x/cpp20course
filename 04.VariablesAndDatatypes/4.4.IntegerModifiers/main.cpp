@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 
-int main(int argc, char **argv) {
+int main() {
   using std::cout, std::endl;
 
   signed int value1{10};
@@ -15,7 +15,7 @@ int main(int argc, char **argv) {
   cout << "sizeof(value1) : " << sizeof(value1) << endl;
   cout << "sizeof(value2) : " << sizeof(value2) << endl;
 
-  unsigned int value3{4};
+  [[maybe_unused]] unsigned int value3{4};
   // unsigned int value4 {-5};
 
   // short. 2 bytes

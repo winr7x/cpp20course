@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-int main(int argc, char **argv) {
+int main() {
   char character1{'a'};
   char character2{'r'};
   char character3{'r'};

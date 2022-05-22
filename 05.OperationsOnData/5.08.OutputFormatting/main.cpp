@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 
-int main(int argc, char **argv) {
+int main() {
   // std::flush : flushes the output buffer to its final destination: device (terminal)
   std::cout << "This is a nice message...." << std::endl
             << std::flush;

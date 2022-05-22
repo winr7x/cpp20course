@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-int main(int argc, char **argv) {
+int main() {
   int number1 = 15;         // Decimal
   int number2 = 017;        // Octal
   int number3 = 0x0f;       // Hexademical
