@@ -1,9 +1,11 @@
-## How to configure and build project
+## Configure & build
 
-### Configure with MSVC
+### Configure MSVC
 ```powershell
-# Windows Start Menu --> Visual Studio 2022 --> 'Developer PowerShell for VS 2022'
+# Install Visual Studio
+# Launch Windows Start Menu --> Visual Studio 2022 --> 'Developer PowerShell for VS 2022'
 
+# In PowerShell:
 cd $Env:USERPROFILE\Documents\cpp31hours\
 cmake -G 'Visual Studio 17 2022' -S .\ -B .\build\                                                     # configure cmake msvc. way 1
 & 'C:\Program Files\CMake\bin\cmake.exe' -G 'Visual Studio 17 2022' -S .\ -B .\build\                  # configure cmake msvc. way 2
@@ -12,33 +14,26 @@ cmake -G 'Visual Studio 17 2022' -S .\ -B .\build\                              
 # & is the call operator which allows you to execute a command, a script, or a function
 ```
 
-### Configure with GCC or Clang
+### Configure GCC/Clang
 ```powershell
-# In Windows:
+# Install MinGW
+# In PowerShell:
 cd $Env:USERPROFILE\Documents\cpp31hours\
 cmake -G 'MinGW Makefiles' -S .\ -B .\build\                                                           # configure cmake gcc
 cmake -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -G 'MinGW Makefiles' -S .\ -B .\build\     # configure cmake clang
 ```
 
-```bash
-# In Linux:
-# todo
-```
-
 ### Build
 ```powershell
-# In Windows:
+# In PowerShell:
 cd $Env:USERPROFILE\Documents\cpp31hours\
 cmake --build .\build\ --config Release --clean-first --target 5.6.RelationalOperators #--verbose      # build specific target
-cmake --build .\build\ --config Release --verbose --clean-first                                        # build entire project
-```
-
-```
-# In Linux:
-# todo
+cmake --build .\build\ --config Release --verbose --clean-first -j1                                    # build entire project
 ```
 
 ## Tags
+
+In cpp files tags are placed:
 
 `NEW_FOR_ME` - Information which was new for me.  
 `UNCOMMENT_FOR_ERROR` - Uncomment code marked with this tag to get error or warning.
@@ -55,7 +50,7 @@ dir -Recurse | sls -pattern "NEW_FOR_ME"
 To format all cpp files in project:
 
 ```powershell
-# In Windows:
+# In PowerShell:
 cd $Env:USERPROFILE\Documents\cpp31hours\
 clang-format -i @(Get-ChildItem -Filter *.cpp  -Recurse | Where {$_.FullName -notlike "*\build\*"} | % { $_.FullName })
 ```
