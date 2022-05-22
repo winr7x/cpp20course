@@ -1,0 +1,13 @@
+80. Variable Scope Revisited
+
+Too easy
+
+bool green{false};
+
+if (green) {
+  int car_count{23};
+  cout << "Light is green "
+} else {
+  // car_count++; // Compiler error
+  cout << "Light is not green. Y'all shoul STOP!"
+}
