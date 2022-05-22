@@ -28,6 +28,10 @@ if(CMAKE_GENERATOR MATCHES "^Visual Studio.+")
                        # s - Enables standard C++ stack unwinding. Catches only standard C++ exceptions when you use catch(...) syntax. 
                        # c - When used with /EHs, the compiler assumes that functions declared as extern "C" never throw a C++ exception.
                        # It has no effect when used with /EHa (that is, /EHca is equivalent to /EHa). /EHc is ignored if /EHs or /EHa aren't specified.
+    /W4                # /W4 displays level 1, level 2, and level 3 warnings, and all level 4 (informational) warnings that aren't off by default.
+                       # We recommend that you use this option to provide lint-like warnings.
+                       # For a new project, it may be best to use /W4 in all compilations.
+                       # This option helps ensure the fewest possible hard-to-find code defects.
   )
 elseif(CMAKE_GENERATOR STREQUAL "MinGW Makefiles")
   # message("##### CMAKE_GENERATOR is MinGW")
@@ -43,6 +47,11 @@ elseif(CMAKE_GENERATOR STREQUAL "MinGW Makefiles")
                        # c++14 or gnu++14
                        # c++17 or gnu++17
                        # c++20 or gnu++20
+    -Wall              # This enables all the warnings about constructions that some users consider questionable,
+                       # and that are easy to avoid (or modify to prevent the warning), even in conjunction with macros.
+                       # This also enables some language-specific warnings
+    -Wextra            # This enables some extra warning flags that are not enabled by -Wall.
+    -pedantic          # Issue all the warnings demanded by strict ISO C and ISO C++
   )
 else()
   message(FATAL_ERROR "Unexpected cmake generator ${CMAKE_GENERATOR}")
