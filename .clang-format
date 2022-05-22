@@ -1,0 +1,5 @@
+﻿---
+AllowShortFunctionsOnASingleLine: None
+ColumnLimit: '0'
+
+...
