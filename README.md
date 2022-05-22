@@ -49,3 +49,13 @@ To search tag in project:
 # In PowerShell:
 dir -Recurse | sls -pattern "NEW_FOR_ME"
 ```
+
+## clang-format
+
+To format all cpp files in project:
+
+```powershell
+# In Windows:
+cd $Env:USERPROFILE\Documents\cpp31hours\
+clang-format -i @(Get-ChildItem -Filter *.cpp  -Recurse | Where {$_.FullName -notlike "*\build\*"} | % { $_.FullName })
+```
