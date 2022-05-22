@@ -4,7 +4,7 @@
 
 int main() {
 
-  const bool go {true};
+  const bool go{true};
 
   // With if initializer
   if (const int high_speed{33}, fake_var{-200}; go) { // NEW_FOR_ME Initialize variable in if
