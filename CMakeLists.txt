@@ -7,9 +7,14 @@ set(PROJECT_NAME cpp31hours)
 
 project (${PROJECT_NAME})
 
+option(ROOSTER_WARNINGS_AS_ERRORS "Treat compiler warnings as errors" OFF)
+
 message("") # empty line
 
 if(CMAKE_GENERATOR MATCHES "^Visual Studio.+")
+  if(ROOSTER_WARNINGS_AS_ERRORS)
+    set(ROOSTER_WARNINGS_AS_ERRORS_FLAG /WX)
+  endif()
   # message("##### CMAKE_GENERATOR is Visual Studio")
   add_compile_options(
     /Zi                # (Debug Information Format) 
@@ -32,8 +37,13 @@ if(CMAKE_GENERATOR MATCHES "^Visual Studio.+")
                        # We recommend that you use this option to provide lint-like warnings.
                        # For a new project, it may be best to use /W4 in all compilations.
                        # This option helps ensure the fewest possible hard-to-find code defects.
+
+    ${ROOSTER_WARNINGS_AS_ERRORS_FLAG}
   )
 elseif(CMAKE_GENERATOR STREQUAL "MinGW Makefiles")
+  if(ROOSTER_WARNINGS_AS_ERRORS)
+    set(ROOSTER_WARNINGS_AS_ERRORS_FLAG -Werror)
+  endif()
   # message("##### CMAKE_GENERATOR is MinGW")
   add_compile_options(
     -g                 # generates debug information to be used by GDB debugger
@@ -52,6 +62,8 @@ elseif(CMAKE_GENERATOR STREQUAL "MinGW Makefiles")
                        # This also enables some language-specific warnings
     -Wextra            # This enables some extra warning flags that are not enabled by -Wall.
     -pedantic          # Issue all the warnings demanded by strict ISO C and ISO C++
+
+    ${ROOSTER_WARNINGS_AS_ERRORS_FLAG}
   )
 else()
   message(FATAL_ERROR "Unexpected cmake generator ${CMAKE_GENERATOR}")
