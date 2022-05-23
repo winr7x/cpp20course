@@ -54,3 +54,13 @@ To format all cpp files in project:
 cd $Env:USERPROFILE\Documents\cpp31hours\
 clang-format -i @(Get-ChildItem -Filter *.cpp  -Recurse | Where {$_.FullName -notlike "*\build\*"} | % { $_.FullName })
 ```
+
+## Check project is warnings-free
+```powershell
+# In PowerShell:
+.\check_no_compiler_warnings.ps1 -Jobs 8
+
+# To check PowerShell script for drawbacks:
+Install-Module PSScriptAnalyzer -Force -Scope CurrentUser
+Invoke-ScriptAnalyzer check_no_compiler_warnings.ps1
+```
