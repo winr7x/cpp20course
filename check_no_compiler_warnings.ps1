@@ -1,5 +1,8 @@
 # Checked with PSScriptAnalyzer
 
+# The script checks the entire project for compile warnings
+# It invokes cmake configure and cmake build with the -DROOSTER_WARNINGS_AS_ERRORS=ON flag and exits with an error if there is any compile error
+
 param ([ValidateRange(1,999)] [Int] $Jobs)
 
 $ScriptName = $MyInvocation.MyCommand.Name
