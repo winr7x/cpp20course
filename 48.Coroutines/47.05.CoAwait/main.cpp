@@ -46,7 +46,7 @@ int main() {
 
 
   std::cout << std::boolalpha;
-  std::cout << "coro done : " << task.m_handle.done() << std::endl;  
+  std::cout << "coro done : " << task.m_handle.done() << std::endl; // NEW_FOR_ME Check coroutine is done 
 
   // Resuming after coroutine has run to completion. BAD!
   // task.m_handle.resume(); // UNCOMMENT_FOR_ERROR When uncomment you will not see "Done!"
