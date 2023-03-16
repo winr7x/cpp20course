@@ -28,10 +28,12 @@ function(rooster_add_all_subdirs_of_current_dir)
   rooster_add_subdirs("${SUBDIRS}")
 endfunction()
 
-# Call add_executable() on main.cpp with executable name the same as directory name containing main.cpp
+# Call add_executable() on main.cpp (and optionally other sources) with executable name the same as directory name containing main.cpp
+# example 1: function_name()
+# example 2: function_name("one.cpp;two.cpp;three.cpp")
 function(rooster_add_executable_with_curdir_name_maincpp)
   get_filename_component(EXECUTABLE_NAME ${CMAKE_CURRENT_SOURCE_DIR} NAME)
-  add_executable(${EXECUTABLE_NAME} main.cpp)
+  add_executable(${EXECUTABLE_NAME} main.cpp ${ARGN})
 endfunction()
 
 # Get <result>-list of top chapter subdirectories (not recursively) in directory <curdir>. Top chapter directory is dir with name of format '\d\d\.SomeName'
