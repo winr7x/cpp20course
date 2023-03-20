@@ -1,3 +1,5 @@
+string_view can't [outlive] the viewed string - aʊtˈlɪv - пережить
+
 We are going to [embark] on the journey - ɪmˈbɑːk - начинать
 
 But the compiler from Microsoft is [freaking out] - психует
