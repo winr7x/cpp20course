@@ -12,11 +12,9 @@ we have a [squiggly] line - ˈskwɪglɪ - волнистая
 
 if you don't find a coroutine type that [suits] your need - sjuːt - соответствует потребностям
 
-[by now] we have seen about the promise type and...
-
 but we can't run this [as of yet] - на данный момент
 
-very first [peek] into the coroutine infrastructure - piːk - быстрый взгляд
+very first [peek] into the coroutine infrastructure - piːk - заглянуть
 
 Please, [bear with me] - потерпите меня
 
@@ -28,36 +26,32 @@ This is the idea I want to [convey] here - передать - kənˈveɪ
 
 The compiler transforms the header into a [legit] module interface - законный - ləˈdʒɪt
 
-I will probably [redo] thish chapter - переделаю
+[That being said], it is possible to use other tools
 
-[That being said], it is possible to use other tools                               53. 570. 12:54
+we [might] not have covered yet - возможно
 
-we [might] not have covered yet - возможно                                         53. 570. 5:56
-
-that definition is going to [show up] in those multiple files - появлятья          53. 570. 1:59
+that definition is going to [show up] in those multiple files - появлятья
 
 we can [print out] if a number is signed or unsigned
 
-i really hope this [makes sense]                                                   https://youtu.be/8jLOx1hD3_o?t=24332
+i really hope this [makes sense] - имеет смысл
 
-and [we're going to] call rooster and the 2.5 is rounded to 3                      https://youtu.be/8jLOx1hD3_o?t=24802
+[the catch] is down here - загвоздка
 
-[the catch] is down here - загвоздка                                               https://youtu.be/8jLOx1hD3_o?t=24966
+this is something you need to [be aware of] - быть осведомленным
 
-this is something you need to [be aware of] - быть осведомленным                   https://youtu.be/8jLOx1hD3_o?t=24934
+we are going [to recap] what we saw in the chapter - резюмировать
 
-we are going [to recap] what we saw in the chapter - резюмировать                  https://youtu.be/8jLOx1hD3_o?t=25180
-
-expression here which is going to be what we're going to be [switching over]       https://youtu.be/8jLOx1hD3_o?t=27197
+expression here which is going to be what we're going to be [switching over]
 
 "switch" and "switch over have the same meaning. The use of additional prepositions such as the "over" in this case generally sound more colloquial.
 
-we [basically] print every other case after the Marker case is hit - в сущности    https://youtu.be/8jLOx1hD3_o?t=27534
+we [basically] print every other case after the Marker case is hit - в сущности
 
-'for loops' like this and it may look [intimidating] for first users - устрашающе  https://youtu.be/8jLOx1hD3_o?t=28550
+'for loops' like this and it may look [intimidating] for first users - устрашающе
 
-[pillars] of any loop - столпы                                                     https://youtu.be/8jLOx1hD3_o?t=28557
+[pillars] of any loop - ˈpɪləz - столпы
 
-happy == car AND house AND job AND [spouse] - супруг - spaʊs                       74. Short Circuit Evaluations
+happy == car AND house AND job AND [spouse] - супруг - spaʊs
 
-[Short Circuit] Evaluations - короткое замыкание                                   74. Short Circuit Evaluations
+[Short Circuit] Evaluations - короткое замыкание
