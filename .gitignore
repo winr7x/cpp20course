@@ -1,2 +1,7 @@
 # ignore cmake build directory:
 /build/
+
+# ignore VSCode setting.json
+# ignore VSCode c_cpp_properties.json
+# ignore VSCode task.json
+.vscode/*
