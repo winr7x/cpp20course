@@ -1,3 +1,5 @@
+# My study of the course [The C++20 Masterclass: From Fundamentals to Advanced](https://www.udemy.com/course/the-modern-cpp-20-masterclass/)
+
 ## Configure & build
 
 ### Configure MSVC
