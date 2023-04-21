@@ -17,10 +17,10 @@ int main() {
   [[maybe_unused]] int domesticated_animals{dog_count + cat_count};
 
   // Won't compile, the expression in the braces uses undeclared variables
-  // int bad_initialization { doesnt_exist1 + doesnt_exist2 }; // UNCOMMENT_FOR_ERROR
+  // int bad_initialization { doesnt_exist1 + doesnt_exist2 }; // UNCOMMENT_TO_SEE
 
   // 2.9 is of type double, with a wider range than int. ERROR OR WARNING.
-  // int narrowing_conversation {2.9}; // UNCOMMENT_FOR_ERROR
+  // int narrowing_conversation {2.9}; // UNCOMMENT_TO_SEE
 
   std::cout << elephant_count << std::endl;
   [[maybe_unused]] int functional_initialization(10);

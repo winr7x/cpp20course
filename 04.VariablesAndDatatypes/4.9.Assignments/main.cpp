@@ -40,7 +40,7 @@ int main() {
   // Careful about auto assignments
   [[maybe_unused]] auto var3{333u}; // Declare and initializewith type deduction
 
-  // var3 = -22; // Assign negative number. DANGER! UNCOMMENT_FOR_ERROR warning C4245: '=': conversion from 'int' to 'unsigned int'
+  // var3 = -22; // Assign negative number. DANGER! UNCOMMENT_TO_SEE warning C4245: '=': conversion from 'int' to 'unsigned int'
 
   // std::cout << "var3 : " << var3 << std::endl; // It will print 4294967274
 

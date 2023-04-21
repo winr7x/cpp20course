@@ -23,7 +23,7 @@ int main() {
     std::cout << "Also fake_var == " << fake_var << std::endl;
   }
 
-  // std::cout << "high_speed : " << high_speed << std::endl; // UNCOMMENT_FOR_ERROR 'high_speed': undeclared identifier
+  // std::cout << "high_speed : " << high_speed << std::endl; // UNCOMMENT_TO_SEE 'high_speed': undeclared identifier
 
   return 0;
 }

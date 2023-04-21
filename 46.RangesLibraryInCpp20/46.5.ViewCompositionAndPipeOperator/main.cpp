@@ -77,7 +77,7 @@ int main() {
   // that are needed to set up a reverse view.
   std::cout << std::endl;
 
-#if !USE_UNORDERED_MAP // UNCOMMENT_FOR_ERROR std::views::reverse will fail with unordered_map
+#if !USE_UNORDERED_MAP // UNCOMMENT_TO_SEE std::views::reverse will fail with unordered_map
   std::cout << "names in reverse : ";
   // NEW_FOR_ME '|' operator for std::views::reverse
   std::ranges::copy(std::views::keys(classroom) | std::views::reverse, 

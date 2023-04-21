@@ -20,13 +20,13 @@ int main() {
   std::cout << "number2 is : " << number2 << std::endl; // 15'ish digits
   std::cout << "number3 is : " << number3 << std::endl; // 7 digits
 
-  // float number4 = 192400023; // UNCOMMENT_FOR_ERROR warning: implicit conversion from 'int' to 'float' changes value from 192400023 to 192400016
+  // float number4 = 192400023; // UNCOMMENT_TO_SEE warning: implicit conversion from 'int' to 'float' changes value from 192400023 to 192400016
   // NEW_FOR_ME In your case, a float only has about 24 bits of precision. While an int has 32 bits of precision, therefore, some precision is loss by this cast, hence the warning.
 
   // number4 = number4 + 1;
   // std::cout << "number4 is : " << number4 << std::endl;
 
-  // float number4_2 = 192400023f; // NEW_FOR_ME UNCOMMENT_FOR_ERROR error: invalid digit 'f' in decimal constant
+  // float number4_2 = 192400023f; // NEW_FOR_ME UNCOMMENT_TO_SEE error: invalid digit 'f' in decimal constant
 
   float number4_3{192400023.f};
   std::cout << "number4_3 is : " << number4_3 << std::endl;
@@ -49,13 +49,13 @@ int main() {
 
   // Infinity
   // double result{number10 / number11}; // NEW_FOR_ME 'inf' value if we use fractional number types (or -inf when negative / 0.0)
-  //                                     // UNCOMMENT_FOR_ERROR warning C4723: potential divide by 0
+  //                                     // UNCOMMENT_TO_SEE warning C4723: potential divide by 0
 
   // std::cout << number10 << "/" << number11 << "  yields " << result << std::endl; // output: 'inf'
   // std::cout << result << " + " << number10 << " yields " << result + number10 << std::endl; // output: 'inf'
 
   // result = number11 / number12; // NEW_FOR_ME 'nan' (Not A Number) value if we use fractional number types
-  //                               // UNCOMMENT_FOR_ERROR warning C4723: potential divide by 0
+  //                               // UNCOMMENT_TO_SEE warning C4723: potential divide by 0
 
   // std::cout << number11 << "/" << number12 << " = " << result << std::endl;
 

@@ -24,7 +24,7 @@ int main() {
   std::cout << "number1 == number2 : " << (number1 == number2) << std::endl;
   std::cout << "number1 != number2 : " << (number1 != number2) << std::endl;
 
-  // UNCOMMENT_FOR_ERROR '<<'-operation priority is higher than '<'-operation
+  // UNCOMMENT_TO_SEE '<<'-operation priority is higher than '<'-operation
   // std::cout << "number1 < number2 : " << number1 < number2 << std::endl;
 
   std::cout << std::endl;

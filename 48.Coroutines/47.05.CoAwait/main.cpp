@@ -4,7 +4,7 @@
 
 struct CoroType {
   struct promise_type {
-    CoroType get_return_object() { return CoroType(this); } // UNCOMMENT_FOR_ERROR comment and you get error: no member named 'get_return_object' in 'CoroType::promise_type'
+    CoroType get_return_object() { return CoroType(this); } // UNCOMMENT_TO_SEE comment and you get error: no member named 'get_return_object' in 'CoroType::promise_type'
     std::suspend_always initial_suspend() { return {}; }
     std::suspend_always final_suspend() noexcept { return {}; }
     void unhandled_exception() noexcept
@@ -49,7 +49,7 @@ int main() {
   std::cout << "coro done : " << task.m_handle.done() << std::endl; // NEW_FOR_ME Check coroutine is done 
 
   // Resuming after coroutine has run to completion. BAD!
-  // task.m_handle.resume(); // UNCOMMENT_FOR_ERROR When uncomment you will not see "Done!"
+  // task.m_handle.resume(); // UNCOMMENT_TO_SEE When uncomment you will not see "Done!"
 
   std::cout << "Done!" << std::endl; 
 

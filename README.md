@@ -38,7 +38,7 @@ cmake --build .\build\ --config Release --verbose --clean-first -j1             
 In cpp files tags are placed:
 
 `NEW_FOR_ME` - Information which was new for me.  
-`UNCOMMENT_FOR_ERROR` - Uncomment code marked with this tag to get error or warning.
+`UNCOMMENT_TO_SEE` - Uncomment code marked with this tag to get error or warning or something else.
 
 To search tag in project:
 

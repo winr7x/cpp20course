@@ -23,7 +23,7 @@ int main(){
       std::cout << i << std::endl;
   }
 
-#if 0 // UNCOMMENT_FOR_ERROR Infinite loop
+#if 0 // UNCOMMENT_TO_SEE Infinite loop
   for(auto i :std::views::iota(1)) {
       std::cout << i << std::endl;
   }

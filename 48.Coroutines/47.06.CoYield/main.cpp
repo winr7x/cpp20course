@@ -5,7 +5,7 @@
 struct CoroType {
   struct promise_type {
     int m_value;
-    CoroType get_return_object() { return CoroType(this); } // UNCOMMENT_FOR_ERROR comment and you get error: no member named 'get_return_object' in 'CoroType::promise_type'
+    CoroType get_return_object() { return CoroType(this); } // UNCOMMENT_TO_SEE comment and you get error: no member named 'get_return_object' in 'CoroType::promise_type'
     std::suspend_always initial_suspend() { return {}; }
     std::suspend_always final_suspend() noexcept { return {}; }
     void unhandled_exception() noexcept
