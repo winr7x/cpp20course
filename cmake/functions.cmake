@@ -1,4 +1,4 @@
-# 'rooster' is cpp31hours course prefix
+# 'rooster' is cpp20course course prefix
 
 # Get all subdirectories (not recursively) in directory <curdir> as list <result>
 # Output example: "4.8Auto;4.9Assignments"

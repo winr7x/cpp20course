@@ -8,7 +8,7 @@
 # Launch Windows Start Menu --> Visual Studio 2022 --> 'Developer PowerShell for VS 2022'
 
 # In PowerShell:
-cd $Env:USERPROFILE\Documents\cpp31hours\
+cd $Env:USERPROFILE\Documents\cpp20course\
 cmake -G 'Visual Studio 17 2022' -S .\ -B .\build\                                                     # configure cmake msvc. way 1
 & 'C:\Program Files\CMake\bin\cmake.exe' -G 'Visual Studio 17 2022' -S .\ -B .\build\                  # configure cmake msvc. way 2
 
@@ -20,7 +20,7 @@ cmake -G 'Visual Studio 17 2022' -S .\ -B .\build\                              
 ```powershell
 # Install MinGW
 # In PowerShell:
-cd $Env:USERPROFILE\Documents\cpp31hours\
+cd $Env:USERPROFILE\Documents\cpp20course\
 cmake -G 'MinGW Makefiles' -S .\ -B .\build\                                                           # configure cmake gcc
 cmake -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -G 'MinGW Makefiles' -S .\ -B .\build\     # configure cmake clang
 ```
@@ -28,7 +28,7 @@ cmake -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -G 'MinGW Makefiles'
 ### Build
 ```powershell
 # In PowerShell:
-cd $Env:USERPROFILE\Documents\cpp31hours\
+cd $Env:USERPROFILE\Documents\cpp20course\
 cmake --build .\build\ --config Release --clean-first --target 5.6.RelationalOperators #--verbose      # build specific target
 cmake --build .\build\ --config Release --verbose --clean-first -j1                                    # build entire project
 ```
@@ -53,7 +53,7 @@ To format all cpp files in project:
 
 ```powershell
 # In PowerShell:
-cd $Env:USERPROFILE\Documents\cpp31hours\
+cd $Env:USERPROFILE\Documents\cpp20course\
 clang-format -i @(Get-ChildItem -Filter *.cpp  -Recurse | Where {$_.FullName -notlike "*\build\*"} | % { $_.FullName })
 ```
 

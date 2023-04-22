@@ -3,7 +3,7 @@ include(cmake/functions.cmake) # include useful functions
 
 cmake_minimum_required (VERSION 3.13.3) # 3.13.3 was released Jan 14, 2019
 
-set(PROJECT_NAME cpp31hours)
+set(PROJECT_NAME cpp20course)
 
 project (${PROJECT_NAME})
 
