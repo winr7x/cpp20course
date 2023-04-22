@@ -1,0 +1,6 @@
+Too easy
+
+/*
+    /**/             - nested comments are not allowed
+                     
+*/                   - you will get error: expected unqualified-id before '/' token
