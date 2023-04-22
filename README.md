@@ -66,3 +66,11 @@ clang-format -i @(Get-ChildItem -Filter *.cpp  -Recurse | Where {$_.FullName -no
 Install-Module PSScriptAnalyzer -Force -Scope CurrentUser
 Invoke-ScriptAnalyzer check_no_compiler_warnings.ps1
 ```
+
+## How to launch VSCode in Windows
+```
+Win + Pause --> Advanced system settings --> Add to User's PATH var value '%USERPROFILE%\AppData\Local\Programs\Microsoft VS Code\bin'
+Visual Studio 2022 --> Continue without code --> Tools --> Options --> Projects and Solutions --> Locations --> Project location --> set "C:\cpp20course\"
+Pin to taskbar "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2022\Visual Studio Tools\Developer PowerShell for VS 2022.lnk" 
+Launch Developer PowerShell, enter 'code .'
+```
