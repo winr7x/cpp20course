@@ -26,6 +26,7 @@ int main() {
   int age3;
   std::cout << "Please type in your full name and age : " << std::endl;
 
+  // NEW_FOR_ME way to read full line from console, even with spaces
   std::getline(std::cin, full_name);
 
   std::cin >> age3;
