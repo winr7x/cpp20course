@@ -1,0 +1,15 @@
+Too easy
+
+    const unsigned int red_mask {0xFF000000};
+    const unsigned int green_mask {0x00FF0000};
+    const unsigned int blue_mask {0x0000FF00};
+    const unsigned int alpha_mask {0x000000FF};// Transparency information
+    
+    
+    unsigned int my_color {0xAABCDE00};
+    
+    Red is   (my_color &   red_mask) >> 24 (shift by 4 bytes)
+    Green is (my_color & green_mask) >> 16 (shift by 2 bytes)
+    Blue is  (my_color &  blue_mask) >> 8  (shift by 1 byte)
+    Alpha is (my_color & alpha_mask) >> 0
+    
