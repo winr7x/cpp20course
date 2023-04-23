@@ -1,0 +1,21 @@
+Too easy
+
+#include <iostream>
+#include <vector>
+
+template <typename T>
+void print_raw_array(const T* p, std::size_t size)
+{
+    std::cout << "data = ";
+    for (std::size_t i = 0; i < size; ++i)
+        std::cout << p[i] << ' ';
+    std::cout << std::endl;
+}
+
+    //Accessing elements
+    std::cout << "vec_str[2] : " << vec_str[2] << std::endl;
+    std::cout << "vec_str.at(3) : " << vec_str.at(3) << std::endl;
+    
+    //Using the data method
+    std::cout << "using raw array : " << std::endl;
+    print_raw_array(vec_str.data(),vec_str.size()); // NEW_FOR_ME
