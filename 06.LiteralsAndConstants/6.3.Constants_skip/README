@@ -1,0 +1,4 @@
+Too easy
+
+    const int age {34};
+    const float height {1.67f};
