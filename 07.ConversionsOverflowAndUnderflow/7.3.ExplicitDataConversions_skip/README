@@ -1,0 +1,22 @@
+Too easy
+
+
+	double x { 12.5 };
+    double y { 34.6};
+    
+    int sum = x + y;                                       // output: 47
+    
+
+	sum = static_cast<int>(x) + static_cast<int>(y) ;      // output: 46
+
+
+	sum =  static_cast<int> (x + y);                       // output: 47
+
+
+	double PI {3.14};
+	
+	//int int_pi = (int)(PI);                              // not recomended
+    int int_pi = static_cast<int>(PI);                     // NEW_FOR_ME recomended since: 1) very clear itent
+                                                                                           2) easy search in code
+                                                                                           3) get warning if incompatible types
+   
