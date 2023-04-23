@@ -1,0 +1,7 @@
+Too easy
+
+	sandbox_var <<= 2;
+	sandbox_var >>= 4;
+	sandbox_var |= 0b00001111;
+	sandbox_var &= 0b000000000;
+	sandbox_var ^= 0b00000011;
