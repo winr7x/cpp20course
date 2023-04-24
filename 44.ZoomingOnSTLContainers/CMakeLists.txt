@@ -1,0 +1,1 @@
+rooster_add_all_subdirs_of_current_dir()
