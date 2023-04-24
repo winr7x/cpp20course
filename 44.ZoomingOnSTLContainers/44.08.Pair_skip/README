@@ -1,0 +1,17 @@
+Too easy
+
+    #include <utility>
+
+    std::pair<int,std::string> pair1{0,"Book shelf"};
+    std::make_pair(1,"Table"); // Deduces the template arguments
+    pair1.first
+    pair1.second
+    auto [int_var, string_var] = pair1; // NEW_FOR_ME structured binding
+    //Code3 : template argument deduction (C++17)
+    std::pair student(33165, std::string("John Snow"));// Deducing the template arguments
+    std::vector<std::pair<int,std::string>> collection {{10,"Earth"},{20,"Spins"},
+                                                        {30,"From"},{40,"Left"},
+                                                        {50,"To"},{60,"Right"}};
+    for( auto[key,value] : collection){ // NEW_FOR_ME structured binding
+        std::cout << " (" << key << "," << value << ")";
+    }
