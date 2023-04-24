@@ -1,0 +1,31 @@
+    numbers.front()
+    numbers.back()
+    numbers.begin()
+    numbers.end()
+    numbers.rbegin();
+    numbers.rend()
+    numbers.max_size()
+    numbers.empty()
+    numbers.size()
+    numbers.empty()
+    numbers.insert(it_insert,333); // Inserts after it_insert
+    numbers.emplace(it_insert,444);
+    numbers.erase(it_erase);
+    numbers.pop_front();
+    numbers.pop_back();
+    numbers.push_front(111);
+    numbers.push_back(222);
+    numbers.emplace_front(333);
+    numbers.emplace_back(444);
+    numbers.resize(20);
+    numbers.resize(3); // When you resize down, the elements are lost for good.
+    numbers.resize(20);
+    numbers.swap(other_numbers);
+    numbers1.merge(numbers2);
+    numbers1.splice(it_splice,numbers2);
+    numbers.remove(1); // remove both elements equal to 1
+    numbers.remove_if([](int n){ return n > 10; });
+    numbers.reverse();
+    numbers.unique();
+    numbers.sort();
+    numbers.unique();
