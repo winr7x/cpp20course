@@ -1,24 +1,35 @@
-#include <iostream>
-#include <vector>
+template <typename T>
+std::list<T> union_func(const std::list<T>& l1,
+                        const std::list<T>& l2){
 
-int main(){
+    std::list<T> result;
+    auto itl1 = l1.begin();
+    auto itl2 = l2.begin();
+    while( (itl1!=l1.end()) && (itl2!=l2.end())){
 
-    std::vector<int> numbers {1,2,3,4,5,6,7,8,9,10};
-    
-    //Trying out reverse iterators
-    //auto it = numbers.rbegin(); // A reverse iterator increments backwards from the end.
-    std::vector<int>::reverse_iterator it= numbers.rbegin();
-    *it = 34;                                                         // 1,2,3,4,5,6,7,8,9,10 --> 1,2,3,4,5,6,7,8,9,34
-    std::cout << "Numbers : [";
-    while(it != numbers.rend()){                                      // 34 9 8 7 6 5 4 3 2 1
-        std::cout << " " << *it ;
-        ++it;
+        if(*itl1 == *itl2){
+            result.push_back(*itl1);
+            ++itl1;
+            ++itl2;
+        }else if( *itl1 < *itl2){
+            result.push_back(*itl1);
+            ++itl1;
+        }else{
+            result.push_back(*itl2);
+            ++itl2;
+        }
     }
-    std::cout << "] " << std::endl;
 
-    std::cout << "--------" << std::endl;
-    
-    // numbers.rbegin() != numbers.end(); // UNCOMMENT_TO_SEE error: no match for 'operator!=' (operand types are 'std::vector<int>::reverse_iterator' and 'std::vector<int>::iterator')
+    //Handle remaining elements from bigger list
+    while(itl1!=l1.end()){
+        result.push_back(*itl1);
+        ++itl1;
+    }
 
-    return 0;
+    while(itl2!=l2.end()){
+        result.push_back(*itl2);
+        ++itl2;
+    }
+
+    return result;
 }
