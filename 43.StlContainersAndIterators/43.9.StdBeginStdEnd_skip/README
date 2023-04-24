@@ -1,0 +1,3 @@
+Too easy
+
+    for(auto it = std::begin(vi); it!= std::end(vi); ++it){
