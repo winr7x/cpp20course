@@ -1,3 +1,5 @@
+std::stack is not a container [per se] - сам по себе
+
 because these things can really [spin out of control] - выйти из под контроля
 
 std::list is going to be [ruled out] because it doesn't have random access iterators - исключен
