@@ -1,0 +1,49 @@
+Too easy
+
+char encrypt(const char& param){ // Callback function
+}
+
+std::string & modify(            // Main algorithm 1
+    std::string& str_param, 
+    char(* modifier)(const char&))
+{
+}
+
+//Using syntax
+using str_comparator = bool(*)(const std::string& str1, const std::string& str2);
+
+//With typedefs
+typedef bool(*str_comparator) (const std::string& str1, const std::string& str2);
+
+std::string get_best (const BoxContainer<std::string>& sentence, str_comparator comparator) { // Main algorithm 2
+}
+
+
+bool larger_in_size (const std::string& str1, const std::string& str2){ // Callback function
+    return str1.size() > str2.size();
+}
+
+bool greater_lexicographically(const std::string& str1, const std::string& str2){ // Callback function
+    return str1 > str2;
+}
+
+
+int main(){
+
+    std::string msg{"Hello"};
+    modify(msg,encrypt);
+    std::cout << "outcome : " << msg << std::endl;
+
+
+    BoxContainer<std::string> quote;
+    quote.add("The");
+    quote.add("sky");
+    quote.add("is");
+    quote.add("blue");
+    quote.add("my");
+    quote.add("friend");
+
+    str_comparator callback {larger_in_size};
+
+    std::cout << "larger in size : "           << get_best(quote,callback) << std::endl;
+    std::cout << "greater lexicographicaly : " << get_best(quote,greater_lexicographically) << std::endl;
