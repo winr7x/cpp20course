@@ -124,7 +124,6 @@ BoxContainer<T>::~BoxContainer()
 
 template <typename T>
 void BoxContainer<T>::expand(size_t new_capacity){
-	std::cout << "Expanding to " << new_capacity << std::endl;
 	T *new_items_container;
 
 	if (new_capacity <= m_capacity)
@@ -159,7 +158,6 @@ void BoxContainer<T>::add(const T& item){
 
 template <typename T>
 void BoxContainer<T>::add( T&& item){
-    std::cout << "Move version of add called..." << std::endl;
     if (m_size == m_capacity)
         expand(m_size + EXPAND_STEPS);
     //m_items[m_size] = item;
