@@ -1,0 +1,24 @@
+Too easy
+
+double add(double a , double b){
+    return a + b;
+}
+
+    int x{5};	// x,y and z are all lvalues, they have a memory address we
+    int y{10};  //  can retrieve and use later on ,
+    int z{20};  // as long as the variables are in scope.
+
+    int * ptr = &x;
+
+    std::cout << "&(x+y) : " << (&(x+y)) << std::endl;                               // Compiler error: lvalue required as unary '&' operand
+
+
+    double result = add(10.1,20.2);                                                  // add(10.1,20.2) is (evaluates to) an rvalue
+
+    std::cout << "address of add(10.1,20.2) : " << &(add(10.1,20.2)) << std::endl;   // Compiler error: lvalue required as unary '&' operand
+
+    int * ptr1 = &(x + y);                                                           // Compiler error: lvalue required as unary '&' operand
+    int * ptr2 = &add(10.1,20.2);                                                    // Compiler error: lvalue required as unary '&' operand
+                                                                                     // add(10.1 , 20.2) evaluates to an rvalue.
+    int* ptr3 = &45;                                                                 // Compiler error: lvalue required as unary '&' operand
+    int* ptr4 = &x;                                                                  // OK. x is an lvalue, so we can grab its address
