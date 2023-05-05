@@ -1,0 +1,18 @@
+Too easy
+
+    BoxContainer<int> box1;
+    populate_box(box1,2);
+
+    std::cout << "box1 : " << box1 << std::endl;    // box1 is full of values here
+    
+    BoxContainer<int> box2(std::move(box1));
+
+    std::cout << "box2 : " << box2 << std::endl;
+    std::cout << "box1 : " << box1 << std::endl;    // box1 is invalidated. So it's empty here
+
+
+    std::cout << "------" << std::endl;
+
+    box1.add(34);                                   // box1 is invalidated but safe to use further
+    box1.add(4);
+    std::cout << "box1 : " << box1 << std::endl;    // box1 is full of values again
