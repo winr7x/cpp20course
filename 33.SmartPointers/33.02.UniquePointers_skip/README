@@ -1,0 +1,43 @@
+Too easy
+
+
+#include <memory>
+
+        Dog * p_dog_3 = new Dog("Dog3");
+        std::unique_ptr<Dog> up_dog_4{p_dog_3};
+        std::unique_ptr<Dog> up_dog_5 {new Dog("Dog5")};
+        std::unique_ptr<int> up_int2{new int(200)};
+        std::unique_ptr<Dog> up_dog_6{nullptr};
+        
+        up_dog_5->print_dog(); // Calling function with -> operator
+        *up_int2 = 500;
+
+    std::unique_ptr<Dog> up_dog_7 = std::make_unique<Dog>("Dog7"); // Starting from C++14
+    up_dog_7->print_dog();
+     
+    std::unique_ptr<int> p_int3 = std::make_unique<int>(30);
+    *p_int3 =67;
+
+    //Copies not allowed
+    std::unique_ptr<Dog> up_dog_8 = std::make_unique<Dog>("Dog8");
+    up_dog_8->print_dog();
+
+    //std::unique_ptr<Dog> up_dog_9 = up_dog_8; // Error.This also does some kind of copy
+    //std::unique_ptr<Dog> up_dog_10{up_dog_8}; // Error :  Copy constructor deleted for unique_ptr
+
+    //Can however move the pointer.
+    std::unique_ptr<Dog> up_dog_11 = std::make_unique<Dog>("Dog11");
+    {
+        std::unique_ptr<Dog> up_dog_12 = std::move(up_dog_11); // Now up_dog_12 manages Dog11
+                                                               // and up_dog_11 points to nothing(nullptr)
+        up_dog_12->print_dog();
+        if(up_dog_11) { // not-nullptr check is available
+        }
+    
+    }
+
+    std::unique_ptr<Dog> up_dog_13 = std::make_unique<Dog>("Dog13");
+    up_dog_13.reset(); // releases memory and sets pointer to nullptr
+    
+    if(up_dog_13){ // not-nullptr check is available
+    }
