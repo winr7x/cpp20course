@@ -1,0 +1,27 @@
+Too easy
+
+class Point {
+...
+
+	Point operator+(const Point& right_operand) {
+		return Point(this->m_x + right_operand.m_x ,
+					this->m_y + right_operand.m_y );
+	}
+
+	void print_info(){
+		std::cout << "Point [ x : " << m_x << ", y : " << m_y << "]" << std::endl;
+	}
+...
+};
+
+    Point p1(10, 10);
+    Point p2(20, 20);
+    Point p3{p1 + p2}; // p1.operator+(p2)
+
+    Point p4{p2 + Point(5, 5)};
+    
+    p3.print_info();
+    p4.print_info();
+
+    (Point(20,20) + Point(10,10)).print_info();
+    
