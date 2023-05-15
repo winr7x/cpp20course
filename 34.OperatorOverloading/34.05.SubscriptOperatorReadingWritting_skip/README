@@ -1,0 +1,21 @@
+Too easy
+
+class Point
+{
+public:
+    // double  operator[](size_t index) const
+       double& operator[](size_t index) {               // NEW_FOR_ME read & WRITE operator[]
+         assert( (index == 0) || (index == 1));         // return value must be reference
+         return (index==0)? m_x : m_y;                  // 'const' must be removed
+       }
+
+	double m_x{}; // 0
+	double m_y{}; // 1
+};
+
+
+    Point p1(10,20);
+
+    //Changing the data
+    p1[0] = 35.6;
+    p1[1] = 23.9;
