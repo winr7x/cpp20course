@@ -1,0 +1,27 @@
+Too easy
+
+class Point
+{
+	friend void operator--(Point& operand);
+
+private :
+	double m_x{}; 
+	double m_y{}; 
+};
+
+inline void operator--(Point& operand) { // --Prefix
+	--operand.m_x;
+	--operand.m_y;
+}
+
+inline Point operator--(Point& operand, int) { // Postfix-- with dummy int parameter
+	Point local_point(operand);                // Save prev state in local_point
+	--operand;
+	return local_point;
+}
+
+
+    Point p1(10,10);
+    p1--;
+
+    return 0;
