@@ -36,6 +36,12 @@ function(rooster_add_executable_with_curdir_name_maincpp)
   add_executable(${EXECUTABLE_NAME} main.cpp ${ARGN})
 endfunction()
 
+# Override global -pedantic compile option with -Wno-pedantic
+function(rooster_remove_executable_pedantic_option)
+  get_filename_component(EXECUTABLE_NAME ${CMAKE_CURRENT_SOURCE_DIR} NAME)
+  target_compile_options(${EXECUTABLE_NAME} PRIVATE -Wno-pedantic)
+endfunction()
+
 # Get <result>-list of top chapter subdirectories (not recursively) in directory <curdir>. Top chapter directory is dir with name of format '\d\d\.SomeName'
 # Output example: "03.Iterators;22.Algorithms"
 function(rooster_get_top_chapter_subdirs result curdir)
