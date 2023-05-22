@@ -1,5 +1,15 @@
 # 'rooster' is cpp20course course prefix
 
+##############################################################################################
+#
+#             PUBLIC API
+#
+# rooster_add_executable_with_curdir_name_maincpp()
+# rooster_remove_executable_pedantic_option()
+# rooster_add_all_subdirs_of_current_dir()
+#
+##############################################################################################
+
 # Get all subdirectories (not recursively) in directory <curdir> as list <result>
 # Output example: "4.8Auto;4.9Assignments"
 function(rooster_get_all_subdirs result curdir)
